@@ -1,0 +1,44 @@
+.menu-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    padding: 10px;
+    position: relative;
+    bottom: 30px;
+    & .arrowBack {
+        width: 100%;
+        text-align: left;
+        padding-left: 10px;
+    }
+    & a {
+        text-decoration: none;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        & .but {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 15px;
+            & p {
+                text-transform: capitalize;
+                font-size: 1.1rem;
+                color: black;
+            }
+        }
+        & .numOfItems {
+            color: red;
+            padding-right: 10px;
+        }
+    }
+}
+.comp {
+    color: lightgrey;
+    text-align: center;
+    padding: 10px;
+}
