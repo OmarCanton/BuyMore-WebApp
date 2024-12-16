@@ -56,7 +56,7 @@ export default function App () {
   })
   const location = useLocation ()
 
-  const [isConnected, setIsConnected] = useState(navigator.onLine) //default to online since the app is rendered when you have internet connectivity else the website wont open
+  // const [isConnected, setIsConnected] = useState(navigator.onLine) //default to online since the app is rendered when you have internet connectivity else the website wont open
 
   useEffect(() => {
     if(openMenu) {
