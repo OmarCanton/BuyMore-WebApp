@@ -237,15 +237,11 @@ router.post('/updateAbout/:id', async (req, res) => {
 router.post('/updateProfilePicture/:id', upload.single('profileImage'), async (req, res) => {
     const { id } = req.params
     try {
-        const userProfileImage = req.file.path
+        const file = req.file
+        const newUserPicture = file.filename
 
-        const findUserAndUpdateProfileImage = await User.findByIdAndUpdate(
-            id, 
-            { profileImage: userProfileImage }, 
-            { new: true }
-        )
-
-        if(findUserAndUpdateProfileImage) return res.json({findUserAndUpdateProfileImage})
+        const findUserAndUpdateProfileImage = await User.findByIdAndUpdate(id, { profileImage: newUserPicture })
+        res.json({findUserAndUpdateProfileImage})
     } catch (err) {
         res.json({message: err})
     }
