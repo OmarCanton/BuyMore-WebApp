@@ -116,24 +116,24 @@ export default function App () {
 
 
   //check internet connectivity
-  useEffect(() => {
-    const connected = () => {
-      setIsConnected(true)
-      // alert('Connected')
-    }
-    const disconnected = () => {
-      setIsConnected(false)
-      alert('No Internet')
-    }
+  // useEffect(() => {
+  //   const connected = () => {
+  //     setIsConnected(true)
+  //     // alert('Connected')
+  //   }
+  //   const disconnected = () => {
+  //     setIsConnected(false)
+  //     alert('No Internet')
+  //   }
 
-    window.addEventListener('online', connected)
-    window.addEventListener('offline', disconnected)
+  //   window.addEventListener('online', connected)
+  //   window.addEventListener('offline', disconnected)
 
-    return () => {
-      window.removeEventListener('online', connected)
-      window.removeEventListener('offline', disconnected)
-    } 
-  }, [isConnected])
+  //   return () => {
+  //     window.removeEventListener('online', connected)
+  //     window.removeEventListener('offline', disconnected)
+  //   } 
+  // }, [isConnected])
 
   return (
     <>
