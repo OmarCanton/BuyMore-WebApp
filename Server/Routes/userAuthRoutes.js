@@ -7,7 +7,7 @@ require('../Auth/LocalStrategy/localStrategy-signup')
 require('../Auth/LocalStrategy/locaStrategy-signin')
 const User = require('../Config/Models/UserSchema')
 const multer = require('multer')
-const upload = require('../Config/multerConfig')
+const { upload } = require('../Config/multerConfig')
 const nodemailer = require('nodemailer')
 
 const router = Router();
