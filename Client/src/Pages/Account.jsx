@@ -384,7 +384,7 @@ export default function Account () {
                             :
                             <>
                                 { profilePicture ?
-                                    <img onClick={() => setViewProfile(true)} src={profilePicture} alt={user_username} />
+                                    <img onClick={() => setViewProfile(true)} src={`../UserProfile/${profilePicture}`} alt={user_username} />
                                     :
                                     <AccountCircle fontSize='large' htmlColor='grey' style={{transform: 'scale(1.2)'}} className="noProfilePic" />         
                                 }
@@ -565,7 +565,7 @@ export default function Account () {
                     className="viewProfile" 
                     width={'100%'}
                     height={'100%'}
-                    src={profilePicture} 
+                    src={`../UserProfile/${profilePicture}`} 
                     alt={user_username}
                     onClick={() => setViewOps(false)}
                 />

@@ -143,7 +143,7 @@ export default function Header ({appName}) {
                                         : 
                                         <>
                                             { profilePicture ?
-                                                <img src={profilePicture} alt={user_username} /> 
+                                                <img src={`../UserProfile/${profilePicture}`} alt={user_username} /> 
                                                 :
                                                 <AccountCircle fontSize='large' htmlColor='lightgrey' />         
                                             }
